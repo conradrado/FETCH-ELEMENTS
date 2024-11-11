@@ -4,13 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
-    <form action="/user-data" method="POST">
+    <form action="/" method="GET">
         <label for="names">Your name</label>
         <input type="text" name="user-name" id="names">
+
+        <label for="emails">Your Email Address</label>
+        <input type="email" name="emailaddr" id="emailadr">
+
+        <label for="userage">Your age</label>
+        <input type="number" step="2" name="age" id="age">
+
+        <label for="userpassword">Your password</label>
+        <input type="password" name="pwd" id="uesrpassword">
+        
+        <label for="birtdate">Your Birthdate</label>
+        <input type="date" id="birtdate">
+
+        <hr>
+        <h2>How should we verify your account?</h2>
+        
+        <div class="form-control-inline">
+            <input type="radio" name="verify" id="viatxtmsg" value="textmessage"/>
+            <label for="viatxtmsg">Via Text Message</label>
+        </div>        
+
+        <div class="form-control-inline">
+            <input type="radio" name="verify" id="viaemail" value="emailauth"/>
+            <label for="viaemail">Via an email</label>
+        </div>
+     
         <button>submit</button>
     </form>
 </body>
